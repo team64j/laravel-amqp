@@ -1,6 +1,6 @@
 <?php
 
-namespace Team64j\LaravelAmqp\MessageHandler;
+namespace Team64j\LaravelAmqp\Interfaces;
 
 use Anik\Amqp\ConsumableMessage;
 
