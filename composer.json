@@ -1,0 +1,35 @@
+{
+  "name": "team64j/laravel-amqp",
+  "description": "Laravel AMQP",
+  "homepage": "https://github.com/team64j/laravel-amqp",
+  "keywords": [
+    "laravel",
+    "amqp"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Serg Kochin"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "anik/laravel-amqp": "^1.3s"
+  },
+  "autoload": {
+    "psr-4": {
+      "Team64j\\LaravelAmqp\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Anik\\Laravel\\Amqp\\Providers\\AmqpServiceProvider",
+        "Team64j\\LaravelAmqp\\Providers\\AmqpServiceProvider"
+      ],
+      "aliases": {
+        "Amqp": "Anik\\Laravel\\Amqp\\Facades\\Amqp"
+      }
+    }
+  }
+}
