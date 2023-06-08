@@ -18,7 +18,7 @@ class AmqpServiceProvider extends ServiceProvider
             $this->registerCommands();
 
             $this->publishes([
-                __DIR__ . '/../config/amqp.php' => config_path('amqp.php'),
+                __DIR__ . '/../../config/amqp.php' => config_path('amqp.php'),
             ], 'amqp-config');
         }
     }
@@ -29,7 +29,7 @@ class AmqpServiceProvider extends ServiceProvider
     public function register(): void
     {
         if (!$this->app->configurationIsCached()) {
-            $this->mergeConfigFrom(__DIR__ . '/../config/amqp.php', 'amqp');
+            $this->mergeConfigFrom(__DIR__ . '/../../config/amqp.php', 'amqp');
         }
     }
 
