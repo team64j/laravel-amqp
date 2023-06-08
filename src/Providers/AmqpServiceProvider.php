@@ -16,6 +16,20 @@ class AmqpServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->registerCommands();
+
+            $this->publishes([
+                __DIR__ . '/../config/amqp.php' => config_path('amqp.php'),
+            ], 'amqp-config');
+        }
+    }
+
+    /**
+     * @return void
+     */
+    public function register(): void
+    {
+        if (!$this->app->configurationIsCached()) {
+            $this->mergeConfigFrom(__DIR__ . '/../config/amqp.php', 'amqp');
         }
     }
 

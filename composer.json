@@ -24,12 +24,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Anik\\Laravel\\Amqp\\Providers\\AmqpServiceProvider",
         "Team64j\\LaravelAmqp\\Providers\\AmqpServiceProvider"
-      ],
-      "aliases": {
-        "Amqp": "Anik\\Laravel\\Amqp\\Facades\\Amqp"
-      }
+      ]
     }
-  }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
